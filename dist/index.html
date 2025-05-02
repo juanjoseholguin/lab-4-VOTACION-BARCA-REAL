@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Barça vs Real - Votaciones</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(-45deg, #004d98, #ffffff, #004d98, #ffffff);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    h1 {
+      text-align: center;
+      padding: 2rem;
+      font-size: 2.5rem;
+      background-color: rgba(0, 0, 0, 0.3);
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Batalla de Campeones: Barça vs Real Madrid</h1>
+
+  <div style="text-align: center; font-size: 0.9rem; color: #fff; margin-top: -1rem; margin-bottom: 1rem; opacity: 0.8;">
+     Desliza hasta abajo de la pág para ver los resultados de votación de todos los jugadores :p
+  </div>
+
+  <app-container></app-container>
+  <script src="bundle.js"></script>
+</body>
+</html>
