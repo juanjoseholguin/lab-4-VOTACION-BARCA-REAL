@@ -35,15 +35,19 @@ const characters: [Character, Character][] = [
   ]
 ];
 
+
 let votes = Array(characters.length).fill(null).map(() => [0, 0]);
+let voted = Array(characters.length).fill(false);
 let subscribers: Function[] = [];
 
 export const store = {
-  getState: () => ({ characters, votes }),
+  getState: () => ({ characters, votes, voted }),
   subscribe: (cb: Function) => subscribers.push(cb),
 };
 
 export const vote = (index: number, side: number) => {
+  if (voted[index]) return;
   votes[index][side]++;
+  voted[index] = true;
   subscribers.forEach((cb) => cb());
 };
